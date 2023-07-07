@@ -4,7 +4,6 @@ const swcDefaultConfig =
 
 // When the config is loaded, this line should close the app.
 // However, this doesn't happen when using require from above.
-process.exit(1);
 
 module.exports = {
   module: {
