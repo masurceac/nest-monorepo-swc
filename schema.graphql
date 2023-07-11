@@ -7,6 +7,28 @@ type CatEntity {
   name: String!
 }
 
+type CatInheritedEntity {
+  id: String!
+  name: String!
+}
+
+type CatSecondEntity {
+  id: String!
+}
+
+type Mutation {
+  udpateCat(catId: String!, data: UpdateCatInput!): CatEntity!
+}
+
 type Query {
   myFirstPet: CatEntity!
+  myInheritedPet: CatInheritedEntity!
+  mySecondPet: CatSecondEntity!
+}
+
+input UpdateCatInput {
+  campaign: String
+  firstName: String!
+  lastName: String!
+  referral: String
 }
